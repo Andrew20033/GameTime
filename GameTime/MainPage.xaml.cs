@@ -1,6 +1,6 @@
 ﻿using System.Diagnostics;
 using System.Windows;
-
+using System.Windows.Forms;
 
 namespace GameTime
 {
@@ -11,7 +11,7 @@ namespace GameTime
         {
 
             InitializeComponent();
-            
+
         }
 
         private void Button_Rozdil1_Click(object sender, RoutedEventArgs e)
@@ -181,7 +181,6 @@ namespace GameTime
         private void ShowBackgroundImage(bool show)
         {
             backgroundImage.Visibility = show ? Visibility.Visible : Visibility.Collapsed;
-        }
-
+        }             
     }
 }

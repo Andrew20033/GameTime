@@ -7,9 +7,9 @@
         WindowStyle="None" AllowsTransparency="True" Background="Black">
     
     <Grid>
-       
+
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="Auto"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 

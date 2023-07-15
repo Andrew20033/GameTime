@@ -196,12 +196,17 @@
   <ItemGroup>
     <Resource Include="Images\Adventure\a7.jpg" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Діаграма активності.png" />
+  </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\Register\r1.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\Register\r2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Діаграма послідовності.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

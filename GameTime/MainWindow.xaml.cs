@@ -51,7 +51,7 @@ namespace GameTime
 
         private void LoadUserData()
         {
-            string filePath = "userdata.dat";
+            string filePath = "userdata.txt";
 
             if (File.Exists(filePath))
             {
@@ -76,7 +76,7 @@ namespace GameTime
 
         private void SaveUserData()
         {
-            string filePath = "userdata.dat";
+            string filePath = "userdata.txt";
 
             try
             {
@@ -100,9 +100,7 @@ namespace GameTime
                 userData.Password = passwordBox.Password;
                 SaveUserData();
 
-                MessageBox.Show("Registration successful!");
-
-                // Запускаємо основну програму
+                MessageBox.Show("Registration successful!");           
                 LaunchMainProgram();
             }
             else
@@ -119,7 +117,7 @@ namespace GameTime
                 {
                     MessageBox.Show("Login successful!");
 
-                    // Запускаємо основну програму
+                   
                     LaunchMainProgram();
                 }
                 else
@@ -135,11 +133,10 @@ namespace GameTime
 
         private void LaunchMainProgram()
         {
-            // Створення та відкриття основної програми
             MainPage mainPage = new MainPage();
             mainPage.Show();
 
-            // Закриття поточного вікна реєстрації/входу
+   
             Close();
         }
     }
