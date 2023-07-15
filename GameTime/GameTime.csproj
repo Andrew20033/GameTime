@@ -59,6 +59,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="MainPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -66,6 +70,9 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
@@ -101,6 +108,100 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="logo blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Background photo\back.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Action\action1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Action\action2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Action\action3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Action\action4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Action\action5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Action\action6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Action\action7.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Fighting\f1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Fighting\f2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Fighting\f4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Fighting\f3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Fighting\f5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Fighting\f6.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Fighting\f7.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Strategic\s1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Strategic\s2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Strategic\s3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Strategic\s4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Strategic\s5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Strategic\s6.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Strategic\s7.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Adventure\a1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Adventure\a2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Adventure\a3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Adventure\a4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Adventure\a5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Adventure\a6.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Adventure\a7.jpg" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Images\Register\r1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Register\r2.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

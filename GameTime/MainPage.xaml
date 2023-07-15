@@ -1,0 +1,329 @@
+﻿<Window x:Class="GameTime.MainPage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" Height="740" Width="1280" WindowStartupLocation="CenterScreen"
+        WindowStyle="None" AllowsTransparency="True" Background="Black">
+    
+    <Grid>
+       
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- Ліва колонка -->
+        <Grid Grid.Column="0" Background="#202020">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <!-- Логотип -->
+            <StackPanel>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0 35 0 0">
+                    <Border CornerRadius="10" Width="200" Height="100">
+                        <Border.Background>
+                            <LinearGradientBrush StartPoint="0,0" EndPoint="1,2">
+                                <GradientStop Color="#202020" Offset="0"/>
+                                <GradientStop Color="#202020" Offset="1"/>
+                            </LinearGradientBrush>
+                        </Border.Background>
+
+                        <Image Source="logo blue.png"/>
+                    </Border>
+                </StackPanel>
+                <Separator Height="0.8" Margin="20 30" Background="#46558a"/>
+                
+                
+
+                <!-- Кнопки розділів -->
+                <StackPanel Grid.Row="1" Margin="10">
+                    <Button Content="Екшен" Click="Button_Rozdil1_Click" Margin="0,0,0,10" Background="#202020" Foreground="White"/>
+                    <Button Content="Бойові" Click="Button_Rozdil2_Click" Margin="0,0,0,10" Background="#202020" Foreground="White"/>
+                    <Button Content="Стратегії" Click="Button_Rozdil3_Click" Margin="0,0,0,10" Background="#202020" Foreground="White"/>
+                    <Button Content="Пригоди" Click="Button_Rozdil4_Click" Margin="0,0,0,10" Background="#202020" Foreground="White"/>
+                </StackPanel>
+            </StackPanel>
+        </Grid>
+
+        <!-- Права колонка -->
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <!-- Розділ 1 -->
+            <ScrollViewer Height = "740" Width = "1080" VerticalScrollBarVisibility="Visible">
+                <StackPanel Grid.Row="1"  Margin="20">
+                    <Image x:Name="backgroundImage" Source="images/Background photo/back.jpg" Stretch="UniformToFill"/>
+                    <StackPanel x:Name="Rozdil1Content" Visibility="Collapsed">
+                        <TextBlock Text="Екшен" Foreground="White" FontSize="20" FontWeight="Bold" Margin="0,0,0,10"/>
+                        <StackPanel Margin="0,0,0,20">
+                            <TextBlock Text="Remember Me" Foreground="White" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center"/>
+                            <Image Source="images/Action/action1.jpg" Width="250" Height="250" HorizontalAlignment="Center"/>
+                            <TextBlock></TextBlock>
+                            <TextBlock></TextBlock>
+                            <TextBlock TextWrapping="Wrap" Text="Гра в жанрі екшен від третьої особи, розроблена Dontnod Entertainment
+та видана Capcom. Вона була випущена у всьому світі в червні 2013 року для PlayStation 3, 
+Windows і Xbox 360. Сюжет гри зосереджений на Нілін — мисливці за спогадами, яка працює на 
+підпільний опір під назвою «Ерористи». На початку гри, в результаті дій мегакорпорації Memorize, 
+вона втратила майже всі свої спогади. За допомогою таємничої людини на ім'я Край вона вирушає у подорож, 
+щоб відновити свою особистість та дізнатися, як можна змінити світ." Foreground="White" FontSize="15"/>
+                            <TextBlock></TextBlock>
+                            <TextBlock></TextBlock>
+                            <Button Content="Відкрити сайт" Click="Button_Click1" HorizontalAlignment="Left" VerticalAlignment="Center" Background="Black" Foreground="White"/>
+                        </StackPanel>
+
+                        <StackPanel Margin="0,0,0,20">
+                            <TextBlock Text="Red Dead Redemption 2" Foreground="White" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center"/>
+                            <Image Source="Images/Action/action2.jpg" Width="300" Height="200" HorizontalAlignment="Center"/>
+                            <TextBlock></TextBlock>
+                            <TextBlock></TextBlock>
+                            <TextBlock TextWrapping="Wrap" Text="Комп'ютерна гра в жанрах action-adventure та шутера від третього
+особи з відкритим світом, розроблена Rockstar Studios та випущена Rockstar Games для консолей PlayStation 4 та Xbox One 26 жовтня 2018 року
+та для персональних комп'ютерів під керуванням Windows 5 листопада 2019 року. Є третьою грою в серії Red Dead та приквелом до Red Dead Redemption 2010 року." Foreground="White" FontSize="15"/>
+                            <TextBlock></TextBlock>
+                            <TextBlock></TextBlock>
+                            <Button Content="Відкрити сайт" Click="Button_Click2" HorizontalAlignment="Left" VerticalAlignment="Center" Background="Black" Foreground="White"/>
+                        </StackPanel>
+
+                        <StackPanel Margin="0,0,0,20">
+                            <TextBlock Text="Assassin's Creed" Foreground="White" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center"/>
+                            <Image Source="Images/Action/action3.jpg" Width="250" Height="200" HorizontalAlignment="Center"/>
+                            <TextBlock></TextBlock>
+                            <TextBlock></TextBlock>
+                            <TextBlock TextWrapping="Wrap" Text="Медіафраншиза компанії Ubisoft, заснована на серії комп'ютерних ігор. Перша гра вийшла 2007 року, остання — Assassin's Creed Valhalla — 2020 року. 
+Більшість частин франшизи є іграми у жанрі пригодницького бойовика з відкритим світом, де особлива увага приділяється прихованому переміщенню та паркуру." Foreground="White" FontSize="15"/>
+                            <TextBlock></TextBlock>
+                            <TextBlock></TextBlock>
+                            <Button Content="Відкрити сайт" Click="Button_Click3" HorizontalAlignment="Left" VerticalAlignment="Center" Background="Black" Foreground="White"/>
+                        </StackPanel>
+
+                        <StackPanel Margin="0,0,0,20">
+                            <TextBlock Text="Marvel's Spider-Man Remastered" Foreground="White" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center"/>
+                            <Image Source="images/Action/action4.jpg" Width="350" Height="250" HorizontalAlignment="Center"/>
+                            <TextBlock TextWrapping="Wrap" Text="Marvel's Spider-Man Remastered перенесе вас у Нью-Йорк, а точніше на острів Манхеттен. Цього разу мішенню титулованої Людини-Павука стає банда Демонів, яка почала стрясати злочинний світ Нью-Йорка після арешту Вілсона Фіска." Foreground="White" FontSize="15"/>
+                            <TextBlock></TextBlock>
+                            <Button Content="Відкрити сайт" Click="Button_Click4" HorizontalAlignment="Left" VerticalAlignment="Center" Background="Black" Foreground="White"/>
+                        </StackPanel>
+
+                        <StackPanel Margin="0,0,0,20">
+                            <TextBlock Text="Tiny Tina's Wonderlands" Foreground="White" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center"/>
+                            <Image Source="images/Action/action5.jpg" Width="350" Height="250" HorizontalAlignment="Center"/>
+                            <TextBlock TextWrapping="Wrap" Text="Історія в Tiny Tina's Wonderlands представлена ​​у формі рольової сесії під керівництвом титулованої Крихітної Тіни - нестабільного підлітка з вибуховим характером. Ми опиняємось у фантастичному світі в шкурі власноруч створеного героя, відомого як Fatemaker, який має врятувати землю від злого Володаря Дракона." Foreground="White" FontSize="15"/>
+                            <TextBlock></TextBlock>
+                            <Button Content="Відкрити сайт" Click="Button_Click5" HorizontalAlignment="Left" VerticalAlignment="Center" Background="Black" Foreground="White"/>
+                        </StackPanel>
+
+                        <StackPanel Margin="0,0,0,20">
+                            <TextBlock Text="Assassin's Creed Valhalla" Foreground="White" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center"/>
+                            <Image Source="images/Action/action6.png" Width="350" Height="250" HorizontalAlignment="Center"/>
+                            <TextBlock TextWrapping="Wrap" Text="Станьте Ейвором, легендарним воїном-вікінгом у пошуках слави.
+Очолюйте епічні набіги вікінгів на саксонських солдатів та їхні фортеці та повертайте награбоване своїм людям.
+Використовуйте дві потужні зброї одночасно і відчуйте смак дикого бойового стилю вікінгів.
+Прийміть виклик найрізноманітнішим ворогам в історії Assassin's Creed.
+Формуйте розвиток свого персонажа з кожним вибором і йдіть шляхом до слави, розвиваючи своє поселення.
+Досліджуйте відкритий середньовічний світ, що простягається від берегів Норвегії до королівств Англії." Foreground="White" FontSize="15"/>
+                            <TextBlock></TextBlock>
+                            <Button Content="Відкрити сайт" Click="Button_Click6" HorizontalAlignment="Left" VerticalAlignment="Center" Background="Black" Foreground="White"/>
+                        </StackPanel>
+
+                        <StackPanel Margin="0,0,0,20">
+                            <TextBlock Text="Lost Ark" Foreground="White" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center"/>
+                            <Image Source="images/Action/action7.jpg" Width="370" Height="270" HorizontalAlignment="Center"/>
+                            <TextBlock TextWrapping="Wrap" Text="Сюжет гри заснований на пошуку титульного Втраченого ковчега проти сил зла, а саме демонічних легіонів під проводом Казерота. Мета гравців — дістатися до артефакту раніше, ніж опоненти, які хочуть з його допомогою захопити світ. Гравці мають у своєму розпорядженні безліч інструментів, широкий вибір зброї, а також численні ресурси, завдяки яким вони можуть розвивати свого персонажа і переходити на більш високий рівень. Щоб отримати цінні ресурси, вони беруть участь, серед іншого, полювання, збирання чи видобутку, але не тільки." Foreground="White" FontSize="15"/>
+                            <TextBlock></TextBlock>
+                            <Button Content="Відкрити сайт" Click="Button_Click7" HorizontalAlignment="Left" VerticalAlignment="Center" Background="Black" Foreground="White"/>
+                        </StackPanel>
+                    </StackPanel>
+
+
+                    <!-- Розділ 2 -->
+                    <StackPanel x:Name="Rozdil2Content" Visibility="Collapsed">
+                        <TextBlock Text="Бойові" Foreground="White" FontSize="20" FontWeight="Bold" Margin="0,0,0,10"/>
+                        <StackPanel Margin="0,0,0,20">
+                            <TextBlock Text="Counter-Strike: Global Offensive" Foreground="White" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center"/>
+                            <Image Source="images/Fighting/f1.jpg" Width="370" Height="270" HorizontalAlignment="Center"/>
+                            <TextBlock TextWrapping="Wrap" Text="У грі є дві команди для боротьби: терористи та антитерористи. Завдання кожного з них - усунути команду суперника або виконати певне завдання. У випадку терористів – це закладка бомби чи утримання заручників, а у випадку контртерористів – захист зони підриву від закладення бомби чи порятунок заручників. У грі є багато різних режимів, кожен з яких має свої особливості." Foreground="White" FontSize="15"/>
+                            <TextBlock></TextBlock>
+                            <Button Content="Відкрити сайт" Click="Button_Click8" HorizontalAlignment="Left" VerticalAlignment="Center" Background="Black" Foreground="White"/>
+                        </StackPanel>
+
+                        <StackPanel Margin="0,0,0,20">
+                            <TextBlock Text="NARAKA: BLADEPOINT" Foreground="White" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center"/>
+                            <Image Source="images/Fighting/f2.jpg" Width="370" Height="270" HorizontalAlignment="Center"/>
+                            <TextBlock TextWrapping="Wrap" Text="У Naraka: Bladepoint ми спостерігаємо за діями з-за спини героя чи героїні – з т.зв. Перспективи ТЕС. Гра полягає в боротьбі з використанням холодної зброї, і її основною метою є, звичайно ж, перемогти суперника (або суперників)." Foreground="White" FontSize="15"/>
+                            <TextBlock></TextBlock>
+                            <Button Content="Відкрити сайт" Click="Button_Click9" HorizontalAlignment="Left" VerticalAlignment="Center" Background="Black" Foreground="White"/>
+                        </StackPanel>
+
+                        <StackPanel Margin="0,0,0,20">
+                            <TextBlock Text="VALORANT" Foreground="White" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center"/>
+                            <Image Source="images/Fighting/f3.jpg" Width="370" Height="270" HorizontalAlignment="Center"/>
+                            <TextBlock TextWrapping="Wrap" Text="Дія Valorant розгортається в найближчому майбутньому. Під час гри гравець бере на себе роль одного з агентів з різних куточків світу, які борються із загрозою, яка може мати серйозні наслідки для людства. Матчі проводяться між двома командами по п'ять гравців. Кожен гравець може вибрати свого персонажа з різними навичками та стилем гри." Foreground="White" FontSize="15"/>
+                            <TextBlock></TextBlock>
+                            <Button Content="Відкрити сайт" Click="Button_Click10" HorizontalAlignment="Left" VerticalAlignment="Center" Background="Black" Foreground="White"/>
+                        </StackPanel>
+
+                        <StackPanel Margin="0,0,0,20">
+                            <TextBlock Text="World of Warships" Foreground="White" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center"/>
+                            <Image Source="images/Fighting/f4.jpg" Width="370" Height="270" HorizontalAlignment="Center"/>
+                            <TextBlock TextWrapping="Wrap" Text="У World of Warships ви керуєте найвідомішими військовими кораблями минулого століття та Другої світової війни. Ваша пригода починається на першому рівні, найнижчому ранзі військових кораблів. Беручи участь у різноманітних морських боях і здобуваючи першу перемогу, ви досить швидко отримаєте гроші та досвід. Обидва предмети можна використовувати не тільки для покупки нових компонентів для власного корабля, але й для розблокування нового класу або нового рівня військових кораблів. Крок за кроком ви піднімаєтеся на вершину таким чином і отримуєте необхідну вогневу міць, щоб потопити найсильніших супротивників." Foreground="White" FontSize="15"/>
+                            <TextBlock></TextBlock>
+                            <Button Content="Відкрити сайт" Click="Button_Click11" HorizontalAlignment="Left" VerticalAlignment="Center" Background="Black" Foreground="White"/>
+                        </StackPanel>
+
+                        <StackPanel Margin="0,0,0,20">
+                            <TextBlock Text="World of Tanks" Foreground="White" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center"/>
+                            <Image Source="images/Fighting/f5.jpg" Width="370" Height="270" HorizontalAlignment="Center"/>
+                            <TextBlock TextWrapping="Wrap" Text="Ігровий процес зосереджений на танкових битвах між гравцями у взаємодії між гравцями з використанням різних типів бойових машин. У розпорядженні гравця понад 650 транспортних засобів: танки (легкі, середні, важкі), самохідна артилерія, колісні машини та винищувачі танків періоду від Першої світової війни до початку холодної війни, що надходять із США, Чехословаччини, СРСР, Третій Рейх, Франція, Велика Британія, Китай, Японія, Швеція, Італія та Польща. Транспортні засоби, представлені в грі, частково базуються на їхніх історичних аналогах, але модифіковані для практичності гри, а частково базуються на ранніх конструкціях або суто вигаданих транспортних засобах." Foreground="White" FontSize="15"/>
+                            <TextBlock></TextBlock>
+                            <Button Content="Відкрити сайт" Click="Button_Click12" HorizontalAlignment="Left" VerticalAlignment="Center" Background="Black" Foreground="White"/>
+                        </StackPanel>
+
+                        <StackPanel Margin="0,0,0,20">
+                            <TextBlock Text="PUBG: Battlegrounds" Foreground="White" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center"/>
+                            <Image Source="images/Fighting/f6.jpg" Width="370" Height="270" HorizontalAlignment="Center"/>
+                            <TextBlock TextWrapping="Wrap" Text="Гра відноситься до жанру Battle Royale. Одночасно на сервері можуть грати до 100 осіб. На початку гри персонаж гравця стрибає з парашутом із літака. Після приземлення гравець намагається знайти обладнання, заховане у випадкових місцях на карті, яке може бути корисним для виживання. Основне завдання гравця - усунути інших гравців і уникнути контакту зі смертоносним бар'єром, що оточує ігрову зону, яка постійно звужується і обмежує зону дій для гравців. Матч виграє гравець, чий персонаж єдиний залишився живим на карті. У грі також є можливість командної гри" Foreground="White" FontSize="15"/>
+                            <TextBlock></TextBlock>
+                            <Button Content="Відкрити сайт" Click="Button_Click13" HorizontalAlignment="Left" VerticalAlignment="Center" Background="Black" Foreground="White"/>
+                        </StackPanel>
+
+                        <StackPanel Margin="0,0,0,20">
+                            <TextBlock Text="Destiny 2" Foreground="White" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center"/>
+                            <Image Source="images/Fighting/f7.jpg" Width="370" Height="270" HorizontalAlignment="Center"/>
+                            <TextBlock TextWrapping="Wrap" Text="Незабаром після подій першої частини гри останній бастіон людства, що населяє Останнє Місто на Землі, виявляє в космосі таємничу сутність, яку називають Мандрівником. З отриманням Світла - паракаузальної сили, отриманої від Мандрівника, він значно прискорює прогрес і розвиток останньої людської цивілізації, тривалість якої називається Золотим століттям. Ця епоха закінчується з появою ворожої сили під назвою Темрява, володарі якої вторгаються в людей." Foreground="White" FontSize="15"/>
+                            <TextBlock></TextBlock>
+                            <Button Content="Відкрити сайт" Click="Button_Click14" HorizontalAlignment="Left" VerticalAlignment="Center" Background="Black" Foreground="White"/>
+                        </StackPanel>
+                    </StackPanel>
+
+
+                    <!--Розділ 3 -->
+                    <StackPanel x:Name="Rozdil3Content" Visibility="Collapsed">
+                        <TextBlock Text="Стратегії" Foreground="White" FontSize="20" FontWeight="Bold" Margin="0,0,0,10"/>
+                        <StackPanel Margin="0,0,0,20">
+                            <TextBlock Text="Stellaris" Foreground="White" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center"/>
+                            <Image Source="images/Strategic/s1.jpg" Width="370" Height="270" HorizontalAlignment="Center"/>
+                            <TextBlock TextWrapping="Wrap" Text="Ігровий процес у Stellaris починається з вибору власної раси. Виробники створили багато готових націй, але якщо вони виявляються незадовільними, у розпорядження гравця надається спеціальний майстер, за допомогою якого ви можете налаштувати зовнішній вигляд його представників і визначити особливості, які він представляє. Крім того, в редакторі ви можете вибрати ряд інших параметрів, таких як рідна планета, система імперії, тип правління та його етика, а також перший правитель. Ми також уточнюємо походження нашої раси: серед кількох варіантів є такі можливості, як постапокаліпсис (ми керуємо цивілізацією, яка пережила знищення) або судний день (наша раса живе на нестабільній планеті, яка вибухне в майбутньому)." Foreground="White" FontSize="15"/>
+                            <TextBlock></TextBlock>
+                            <Button Content="Відкрити сайт" Click="Button_Click15" HorizontalAlignment="Left" VerticalAlignment="Center" Background="Black" Foreground="White"/>
+                        </StackPanel>
+
+                        <StackPanel Margin="0,0,0,20">
+                            <TextBlock Text="RimWorld" Foreground="White" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center"/>
+                            <Image Source="images/Strategic/s2.jpg" Width="370" Height="270" HorizontalAlignment="Center"/>
+                            <TextBlock TextWrapping="Wrap" Text="Дія RimWorld розгортається в далекому майбутньому, в той час, коли людство колонізувало незліченну кількість інопланетних систем. Незважаючи на це, їй досі не вдалося винайти спосіб перевищити швидкість світла, що робить окремі колонії сильно ізольованими і найчастіше самі по собі. Гравці беруть на себе командування невеликою групою тих, хто вижив після аварії космічного корабля, який розбився на чужій планеті в результаті несправності. Таким чином, у нашому розпорядженні випадкові пасажири, а не навчені фахівці." Foreground="White" FontSize="15"/>
+                            <TextBlock></TextBlock>
+                            <Button Content="Відкрити сайт" Click="Button_Click16" HorizontalAlignment="Left" VerticalAlignment="Center" Background="Black" Foreground="White"/>
+                        </StackPanel>
+
+                        <StackPanel Margin="0,0,0,20">
+                            <TextBlock Text="Cities: Skylines" Foreground="White" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center"/>
+                            <Image Source="images/Strategic/s3.jpg" Width="370" Height="270" HorizontalAlignment="Center"/>
+                            <TextBlock TextWrapping="Wrap" Text="Гравець бере на себе роль міського менеджера, який спочатку має площу 4 км², яка може бути збільшена в міру розвитку міста навіть до 36 км². Він має самостійно проектувати місто з нуля, створюючи дорожню та каналізаційну інфраструктуру, житлові, промислові та комерційні зони, розвиваючи мережу громадського транспорту та забезпечуючи жителів доступом до електроенергії. Щоб місто розвивалося далі, потрібні гроші, які гравець отримує від податків, експорту та громадського транспорту. Важливим питанням є задоволеність громадян, яку можна задовольнити запровадженням відповідних служб у місті, таких як: поліція, охорона здоров'я чи пожежна охорона." Foreground="White" FontSize="15"/>
+                            <TextBlock></TextBlock>
+                            <Button Content="Відкрити сайт" Click="Button_Click17" HorizontalAlignment="Left" VerticalAlignment="Center" Background="Black" Foreground="White"/>
+                        </StackPanel>
+
+                        <StackPanel Margin="0,0,0,20">
+                            <TextBlock Text="Kingdom Eighties" Foreground="White" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center"/>
+                            <Image Source="images/Strategic/s4.jpg" Width="370" Height="270" HorizontalAlignment="Center"/>
+                            <TextBlock TextWrapping="Wrap" Text="Пригодницька мікростратегія для одного гравця з будівництвом бази, натхненна неоновими 80-ми. Ви граєте за лідера, молодого табірного вожатого, який повинен захистити свою сім'ю та все місто від безжального нападу таємничої Жадібності. Що це за монстри і чому вони намагаються вкрасти Корону Творіння, яку ви успадкували? Набирайте сусідських дітей і призначайте їм ролі солдатів і будівельників. Витрачайте монети на будівництво та розширення свого королівства, яке ви будете захищати високими стінами та вежами." Foreground="White" FontSize="15"/>
+                            <TextBlock></TextBlock>
+                            <Button Content="Відкрити сайт" Click="Button_Click18" HorizontalAlignment="Left" VerticalAlignment="Center" Background="Black" Foreground="White"/>
+                        </StackPanel>
+
+                        <StackPanel Margin="0,0,0,20">
+                            <TextBlock Text="Clash of Clans" Foreground="White" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center"/>
+                            <Image Source="images/Strategic/s5.jpg" Width="370" Height="270" HorizontalAlignment="Center"/>
+                            <TextBlock TextWrapping="Wrap" Text="Забава в Clash of Clans полягає в правильному управлінні спочатку скромним поселенням, яке ми поступово перетворюємо на все більш міцну базу. Ми добуваємо ресурси, створюємо і вдосконалюємо військові одиниці та будівлі, створюємо коаліції з іншими гравцями та вступаємо у війну з іншими кланами." Foreground="White" FontSize="15"/>
+                            <TextBlock></TextBlock>
+                            <Button Content="Відкрити сайт" Click="Button_Click19" HorizontalAlignment="Left" VerticalAlignment="Center" Background="Black" Foreground="White"/>
+                        </StackPanel>
+
+                        <StackPanel Margin="0,0,0,20">
+                            <TextBlock Text="Hearts of Iron IV" Foreground="White" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center"/>
+                            <Image Source="images/Strategic/s6.jpg" Width="370" Height="270" HorizontalAlignment="Center"/>
+                            <TextBlock TextWrapping="Wrap" Text="Перемога у ваших руках! Здатність керувати своєю нацією є вашою найпотужнішою зброєю. У стратегічній грі Hearts of Iron IV ви зможете контролювати будь-яку країну під час Другої світової війни — найбільшого конфлікту в історії людства." Foreground="White" FontSize="15"/>
+                            <TextBlock></TextBlock>
+                            <Button Content="Відкрити сайт" Click="Button_Click20" HorizontalAlignment="Left" VerticalAlignment="Center" Background="Black" Foreground="White"/>
+                        </StackPanel>
+
+                        <StackPanel Margin="0,0,0,20">
+                            <TextBlock Text="Base Attack Force" Foreground="White" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center"/>
+                            <Image Source="images/Strategic/s7.jpg" Width="370" Height="270" HorizontalAlignment="Center"/>
+                            <TextBlock TextWrapping="Wrap" Text="Щоб поринути у вільний світ Base Attack Force, вам потрібен ігровий обліковий запис. Ви можете одягнути їх всього за кілька хвилин, і ваша подорож як командира бази може початися! На початку ви отримаєте стислий підручник, який навчить вас, як зводити будівлі на своїй базі та як командувати своїми військами. Base Attack Force розгортається в сучасності - це сучасні типи транспортних засобів, таких як шпигунські танки, бойові танки або гелікоптери. Ваша мета - взяти під контроль місцевість, а для цього вам потрібно багато військових частин! Але для виробництва військових одиниць вам знадобиться потужна промисловість. У Base Attack Force ви зосереджені не лише на веденні війни, а й на управлінні індустрією. Тільки командири з правильним баченням можуть досягти успіху в Base Attack Force!" Foreground="White" FontSize="15"/>
+                            <TextBlock></TextBlock>
+                            <Button Content="Відкрити сайт" Click="Button_Click21" HorizontalAlignment="Left" VerticalAlignment="Center" Background="Black" Foreground="White"/>
+                        </StackPanel>
+                    </StackPanel>
+
+                    <!--Розділ 4 -->
+                    <StackPanel x:Name="Rozdil4Content" Visibility="Collapsed">
+                        <TextBlock Text="Пригоди" Foreground="White" FontSize="20" FontWeight="Bold" Margin="0,0,0,10"/>
+                        <StackPanel Margin="0,0,0,20">
+                            <TextBlock Text="Forever Skies" Foreground="White" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center"/>
+                            <Image Source="images/Adventure/a1.jpg" Width="370" Height="270" HorizontalAlignment="Center"/>
+                            <TextBlock TextWrapping="Wrap" Text="Forever Skies використовує багато шаблонів, типових для цього жанру. Ми спостерігаємо за подією від першої особи, і наше завдання — вижити у ворожому оточенні. У той же час ми досліджуємо і досліджуємо ігровий світ, щоб знайти спосіб впоратися з таємничою хворобою, яка вражає залишки людської популяції. Щоб впоратися з викликами постапокаліптичної реальності, ми повинні створювати предмети та створювати тимчасові бази. Вам також знадобиться зброя, адже отруйні випари приховують невідомий жах." Foreground="White" FontSize="15"/>
+                            <TextBlock></TextBlock>
+                            <Button Content="Відкрити сайт" Click="Button_Click22" HorizontalAlignment="Left" VerticalAlignment="Center" Background="Black" Foreground="White"/>
+                        </StackPanel>
+
+                        <StackPanel Margin="0,0,0,20">
+                            <TextBlock Text="Subnautica" Foreground="White" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center"/>
+                            <Image Source="images/Adventure/a2.jpg" Width="370" Height="270" HorizontalAlignment="Center"/>
+                            <TextBlock TextWrapping="Wrap" Text="Subnautica — це гра, яка поєднує елементи пригодницького бойовика та гри на виживання у відкритому світі, видимому від першої особи. Гравець бере на себе роль самотнього потерпілого від космічного корабля «Аврора», який потрапив у пастку на планеті під назвою «4546B».
+Ігровий процес розгортається в глибинах океану. Гравець може прослуховувати повідомлення і збирати залишені нотатки, завдяки чому розвиває основний сюжет. Гравець збирає матеріали, будує інструменти, бази, керує підводними човнами та досліджує природу планети 4546B." Foreground="White" FontSize="15"/>
+                            <TextBlock></TextBlock>
+                            <Button Content="Відкрити сайт" Click="Button_Click23" HorizontalAlignment="Left" VerticalAlignment="Center" Background="Black" Foreground="White"/>
+                        </StackPanel>
+
+                        <StackPanel Margin="0,0,0,20">
+                            <TextBlock Text="Phasmophobia" Foreground="White" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center"/>
+                            <Image Source="images/Adventure/a3.jpg" Width="370" Height="270" HorizontalAlignment="Center"/>
+                            <TextBlock TextWrapping="Wrap" Text="Гравці беруть на себе роль дослідницької групи з чотирьох осіб, завдання якої полягає в тому, щоб знайти привида, що мешкає в покинутих місцях, таких як будинки, школи та лікарні. Герої мають справу з 24 типами привидів, і кожен з них характеризується різними сильними та слабкими сторонами та підказками, які дозволяють ідентифікувати. На початку гри команда гравців отримує три додаткові завдання, які разом з ідентифікацією привида перетворюються на адекватну винагороду у вигляді внутрішньоігрової валюти. Гравці повинні бути обережними під час сезону полювання, коли привид може вбити одного з них, якщо він не сховається від привида. Кінцева мета гри — зібрати достатньо інформації про привида, щоб ідентифікувати його." Foreground="White" FontSize="15"/>
+                            <TextBlock></TextBlock>
+                            <Button Content="Відкрити сайт" Click="Button_Click24" HorizontalAlignment="Left" VerticalAlignment="Center" Background="Black" Foreground="White"/>
+                        </StackPanel>
+
+                        <StackPanel Margin="0,0,0,20">
+                            <TextBlock Text="Stray" Foreground="White" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center"/>
+                            <Image Source="images/Adventure/a4.jpg" Width="370" Height="270" HorizontalAlignment="Center"/>
+                            <TextBlock TextWrapping="Wrap" Text="Історія, представлена ​​в Stray, відбувається у далекому майбутньому, де людина — лише спогад. Наше місце зайняли роботи, які, до того ж, своєю поведінкою не відрізнялися від людей. Дія відбувається в місті під бетонним куполом, куди випадково потрапляє самотня кішка - головний герой гри. Йому належить пройти шлях від самого дна до вершини мегаполісу і вибратися на поверхню, щоб повернутися до своєї родини. Йому в цьому допомагає В12 - таємничий дрон, який, здається, знає про цей світ більше за інших." Foreground="White" FontSize="15"/>
+                            <TextBlock></TextBlock>
+                            <Button Content="Відкрити сайт" Click="Button_Click25" HorizontalAlignment="Left" VerticalAlignment="Center" Background="Black" Foreground="White"/>
+                        </StackPanel>
+
+                        <StackPanel Margin="0,0,0,20">
+                            <TextBlock Text="Amnesia: The Bunker" Foreground="White" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center"/>
+                            <Image Source="images/Adventure/a5.png" Width="370" Height="270" HorizontalAlignment="Center"/>
+                            <TextBlock TextWrapping="Wrap" Text="Завдання гравця зводиться до того, щоб вижити в протистоянні з цією істотою. Його складність збільшується тим, що ігровий світ напіввідкритий, час проходження не працює на нашу користь, а наші дії часто мають непередбачувані наслідки." Foreground="White" FontSize="15"/>
+                            <TextBlock></TextBlock>
+                            <Button Content="Відкрити сайт" Click="Button_Click26" HorizontalAlignment="Left" VerticalAlignment="Center" Background="Black" Foreground="White"/>
+                        </StackPanel>
+
+                        <StackPanel Margin="0,0,0,20">
+                            <TextBlock Text="Star Wars Jedi: Fallen Order" Foreground="White" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center"/>
+                            <Image Source="images/Adventure/a6.jpg" Width="370" Height="270" HorizontalAlignment="Center"/>
+                            <TextBlock TextWrapping="Wrap" Text="Події розгортаються незабаром після подій, показаних у третій частині кіносаги, тобто «Помста ситхів». Імперські війська нишпорять по галактиці, шукаючи та знищуючи останніх джедаїв. Виконуючи роль колишнього падавана Кела Кестіса, нам доводиться рятуватися, втікаючи, коли на наш слід потрапляють представники темної сторони." Foreground="White" FontSize="15"/>
+                            <TextBlock></TextBlock>
+                            <Button Content="Відкрити сайт" Click="Button_Click27" HorizontalAlignment="Left" VerticalAlignment="Center" Background="Black" Foreground="White"/>
+                        </StackPanel>
+
+                        <StackPanel Margin="0,0,0,20">
+                            <TextBlock Text="Genshin Impact" Foreground="White" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center"/>
+                            <Image Source="images/Adventure/a7.jpg" Width="370" Height="270" HorizontalAlignment="Center"/>
+                            <TextBlock TextWrapping="Wrap" Text="Персонаж гравця, якого звуть Мандрівниця, подорожувала багатьма світами зі своїм близнюком, але після прибуття в Тейват братів і сестер розлучив невідомий бог. Герой разом зі своїм супутником Паймоном мандрує Тейватом у пошуках зниклих побратимів і бере участь у різноманітних пригодах." Foreground="White" FontSize="15"/>
+                            <TextBlock></TextBlock>
+                            <Button Content="Відкрити сайт" Click="Button_Click28" HorizontalAlignment="Left" VerticalAlignment="Center" Background="Black" Foreground="White"/>
+                        </StackPanel>
+                    </StackPanel>
+                </StackPanel>
+            </ScrollViewer>
+        </Grid>
+    </Grid>
+</Window>
